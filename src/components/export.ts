@@ -1,0 +1,21 @@
+import AboutSection from "./AboutSection";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import Header from "./Header";
+import HeroSection from "./HeroSection";
+import MobileBottomNav from "./MobileBottomNav";
+import Skills from "./Skills";
+import Experience from "./Experience";
+import Projects from "./Projects";
+
+export {
+  AboutSection,
+  Contact,
+  Footer,
+  Header,
+  HeroSection,
+  MobileBottomNav,
+  Skills,
+  Experience,
+  Projects,
+};

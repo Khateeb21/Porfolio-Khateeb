@@ -1,0 +1,450 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { Inter, Poppins } from "next/font/google";
+import {
+  FiCode,
+  FiServer,
+  FiSmartphone,
+  FiArrowRight,
+  FiAward,
+  FiUsers,
+  FiTrendingUp,
+  FiChevronRight,
+} from "react-icons/fi";
+import {
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiFramer,
+SiFirebase,
+ SiGooglecloud,
+SiDocker,
+SiExpress,
+SiPython,
+
+
+
+
+
+
+
+} from "react-icons/si";
+import ExperienceCard from "./ExperienceCard";
+import { inter, poppins } from "@/lib/fonts";
+
+// Enhanced Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+};
+
+const floatingVariants = {
+  float: {
+    y: [-10, 10, -10],
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const AboutSection = () => {
+  return (
+    <section
+      id="about"
+      className="relative py-24 lg:py-32 overflow-hidden px-4 md:px-8 bg-gradient-to-br from-zinc-950 via-transparent to-purple-950/10"
+    >
+      {/* Advanced Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 -right-20 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/3 -left-20 w-80 h-80 bg-pink-600/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-96 bg-blue-600/5 rounded-full blur-3xl" />
+
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+        {" "}
+        {/* FIXED: Added sm:px-6 */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="space-y-20"
+        >
+          {/* Enhanced Section Header */}
+          <motion.div
+            variants={itemVariants}
+            className="text-center space-y-6 px-4"
+          >
+            {" "}
+            {/* FIXED: Added px-4 */}
+            <motion.div
+              className="flex items-center justify-center space-x-3 mb-6"
+              variants={floatingVariants}
+              animate="float"
+            >
+              <div className="w-12 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
+              <span
+                className={`text-sm font-semibold text-purple-400/90 tracking-widest uppercase ${poppins.className}`}
+              >
+                Discover My Journey
+              </span>
+              <div className="w-12 h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent" />
+            </motion.div>
+            <h2
+              className={`${poppins.className} text-4xl sm:text-5xl lg:text-7xl font-black bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent leading-tight px-2`}
+            >
+              About Me
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
+          </motion.div>
+
+          {/* Enhanced Main Content - FIXED RIGHT SPACING */}
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center px-4 sm:px-0">
+            {" "}
+            {/* FIXED: Added px-4 on mobile */}
+            {/* Enhanced Profile Image */}
+            <motion.div variants={itemVariants} className="relative">
+              <div className="relative group perspective-1000">
+                {/* 3D Floating Effect */}
+                <motion.div
+                  className="relative w-full max-w-md mx-auto"
+                  whileHover={{ rotateY: 5, rotateX: 5 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                >
+                  {/* Outer Glow */}
+                  <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-700" />{" "}
+                  {/* FIXED: Responsive inset */}
+                  {/* Main Image Container */}
+                  <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-900 p-2 shadow-2xl mx-auto">
+                    {" "}
+                    {/* FIXED: Added mx-auto */}
+                    <div className="relative w-full h-full rounded-xl overflow-hidden border border-zinc-700/50">
+                      <Image
+                        src="/images/Khateeb_Profile_Pic.jpg"
+                        alt="Khateeb Fayaz - Full Stack Developer"
+                        fill
+                        className="object-contain object-top transition-all duration-1000 group-hover:scale-110 group-hover:rotate-1"
+                        quality={100}
+                        priority
+                      />
+
+                      {/* Advanced Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-zinc-900/20 to-transparent" />
+
+                      {/* Animated Scan Line */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
+                        initial={{ y: "-100%" }}
+                        whileHover={{ y: "100%" }}
+                        transition={{ duration: 1.2, ease: "easeInOut" }}
+                      />
+
+                      {/* Enhanced Stats Overlay */}
+                      <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 grid grid-cols-3 gap-2 sm:gap-3">
+                        {" "}
+                        {/* FIXED: Responsive spacing */}
+                        {[
+                          { icon: FiAward, value: "1", label: "Years Exp" },
+                          { icon: FiUsers, value: "10+", label: "Projects" },
+                          {
+                            icon: FiTrendingUp,
+                            value: "100%",
+                            label: "Success",
+                          },
+                        ].map((stat, index) => (
+                          <motion.div
+                            key={index}
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            className="bg-zinc-900/90 backdrop-blur-md rounded-xl p-2 sm:p-3 text-center border border-zinc-700/50 hover:border-purple-500/50 transition-all duration-300" // FIXED: Responsive padding
+                          >
+                            <stat.icon className="w-3 h-3 sm:w-4 sm:h-4 text-purple-400 mx-auto mb-1 sm:mb-2" />{" "}
+                            {/* FIXED: Responsive icon size */}
+                            <div
+                              className={`text-xs sm:text-sm font-bold text-white ${poppins.className}`} // FIXED: Responsive text
+                            >
+                              {stat.value}
+                            </div>
+                            <div className="text-[10px] sm:text-xs text-gray-400 font-medium">
+                              {" "}
+                              {/* FIXED: Responsive text */}
+                              {stat.label}
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Enhanced Floating Tech Icons - FIXED: Responsive positioning */}
+                <motion.div
+                  className="absolute -top-4 -right-4 sm:-top-8 sm:-right-8 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/25" // FIXED: Responsive size and position
+                  animate={{
+                    rotate: 360,
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{
+                    rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+                    scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                  }}
+                >
+                  <SiReact className="w-6 h-6 sm:w-8 sm:h-8 text-white" />{" "}
+                  {/* FIXED: Responsive icon */}
+                </motion.div>
+
+                <motion.div
+                  className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/25" // FIXED: Responsive size and position
+                  variants={floatingVariants}
+                  animate="float"
+                >
+                  <SiNodedotjs className="w-5 h-5 sm:w-7 sm:h-7 text-white" />{" "}
+                  {/* FIXED: Responsive icon */}
+                </motion.div>
+
+                {/* New Floating Icon - FIXED: Responsive positioning */}
+                <motion.div
+                  className="absolute top-1/2 -right-6 sm:-right-10 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-orange-500/25" // FIXED: Responsive size and position
+                  animate={{
+                    y: [-15, 15, -15],
+                    rotate: [0, 180, 360],
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <SiFramer className="w-4 h-4 sm:w-6 sm:h-6 text-white" />{" "}
+                  {/* FIXED: Responsive icon */}
+                </motion.div>
+              </div>
+            </motion.div>
+            {/* Enhanced Content - FIXED: Right spacing on mobile */}
+            <motion.div
+              variants={itemVariants}
+              className="space-y-8 sm:space-y-10 px-2 sm:px-0"
+            >
+              {/* Enhanced Experience Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                <ExperienceCard
+                  field="Front End"
+                  duration="1 Year"
+                  icon={<FiCode className="w-6 h-6 sm:w-7 sm:h-7" />}
+                  gradient="from-purple-500 to-blue-500"
+                  description="End-to-end solutions"
+                />
+                <ExperienceCard
+                  field="Backend"
+                  duration="1 Year"
+                  icon={<FiServer className="w-6 h-6 sm:w-7 sm:h-7" />}
+                  gradient="from-blue-500 to-cyan-500"
+                  description="Robust APIs & Systems"
+                />
+                <ExperienceCard
+                  field="Database"
+                  duration="1 Year"
+                  icon={<FiSmartphone className="w-6 h-6 sm:w-7 sm:h-7" />}
+                  gradient="from-cyan-500 to-green-500"
+                  description="Cross-platform apps"
+                />
+              </div>
+              {/* Enhanced Description */}
+              <div className="space-y-6 sm:space-y-8">
+                {" "}
+                {/* FIXED: Responsive spacing */}
+                <div className="space-y-4 sm:space-y-6">
+                  {" "}
+                  {/* FIXED: Responsive spacing */}
+                  <h3
+                    className={`text-2xl sm:text-3xl lg:text-4xl font-black text-white ${poppins.className}`} // FIXED: Responsive text
+                  >
+                    Implementing{" "}
+                    <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      Excellence
+                    </span>
+                  </h3>
+                  <div className="space-y-3 sm:space-y-4">
+                    {" "}
+                    {/* FIXED: Responsive spacing */}
+                    <p
+                      className={`text-gray-300/90 leading-relaxed text-base sm:text-lg ${inter.className}`} // FIXED: Responsive text
+                    >
+                      I&apos;m{" "}
+                      <span
+                        className={`${poppins.className} text-purple-400 font-semibold`}
+                      >
+                        Khateeb Fayaz
+                      </span>
+                      , a passionate Full Stack Developer with{" "}
+                      <span
+                        className={`${poppins.className} text-pink-400 font-semibold`}
+                      >
+                        1 year
+                      </span>{" "}
+                      Skilled in building scalable, secure applications with
+                      optimized performance and modern authentication system
+                    </p>
+                    <p
+                      className={`text-gray-300/90 leading-relaxed text-base sm:text-lg ${inter.className}`} // FIXED: Responsive text
+                    >
+                      I specialize in creating seamless user experiences with
+                      modern technologies, clean architecture, and
+                      performance-optimized code and bringing AI into  business adding key
+                      value.
+                    </p>
+                  </div>
+                </div>
+                {/* Enhanced Key Strengths */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                  {" "}
+                  {/* FIXED: Responsive gap */}
+                  {[
+                    "Modern Tech Stack",
+                    "AI INTEGRATION",
+                    "Performance Optimization",
+                    "User-Centric Design",
+                    "Agile Development",
+                    "Continuous Learning",
+
+                  ].map((strength, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-center space-x-2 sm:space-x-3 group" // FIXED: Responsive spacing
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    >
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />{" "}
+                      {/* FIXED: Responsive dot size */}
+                      <span
+                        className={`text-gray-300 font-medium text-sm sm:text-base ${inter.className} group-hover:text-white transition-colors duration-300`} // FIXED: Responsive text
+                      >
+                        {strength}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+                {/* Enhanced Tech Stack Preview */}
+                <motion.div
+                  className="p-4 sm:p-6 bg-zinc-800/40 backdrop-blur-md rounded-2xl border border-zinc-700/50 hover:border-purple-500/30 transition-all duration-500 group" // FIXED: Responsive padding
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    {" "}
+                    {/* FIXED: Responsive spacing */}
+                    <span
+                      className={`${poppins.className} text-base sm:text-lg font-semibold text-white`} // FIXED: Responsive text
+                    >
+                      Tech Stack
+                    </span>
+                    <FiChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 group-hover:translate-x-1 transition-transform duration-300" />{" "}
+                    {/* FIXED: Responsive icon */}
+                  </div>
+                  <div className="flex items-center justify-center sm:justify-start space-x-4 sm:space-x-6 flex-wrap gap-3 sm:gap-0">
+                    {" "}
+                    {/* FIXED: Responsive layout */}
+                    {[
+                      {
+                        icon: SiNextdotjs,
+                        color: "text-white",
+                        name: "Next.js",
+                      },
+                      {
+                        icon: SiTypescript,
+                        color: "text-blue-400",
+                        name: "TypeScript",
+                      },
+                      {
+                        icon: SiMongodb,
+                        color: "text-green-400",
+                        name: "MongoDB",
+                      },
+                      {
+                        icon: SiTailwindcss,
+                        color: "text-cyan-400",
+                        name: "Tailwind",
+                      },
+                      {icon: SiFirebase,name:"Firebase"},
+                      {icon:  SiGooglecloud  ,name:"Cloud"},
+                      {icon:  SiPython  ,name:"Python"},
+
+                      { icon: SiReact, color: "text-cyan-300", name: "React" },
+                      
+                    ].map((tech, index) => (
+                      <motion.div
+                        key={index}
+                        whileHover={{ scale: 1.3, y: -5 }}
+                        className="flex flex-col items-center space-y-1 sm:space-y-2 group/tech" // FIXED: Responsive spacing
+                      >
+                        <div
+                          className={`${tech.color} opacity-80 group-hover/tech:opacity-100 transition-all duration-300`}
+                        >
+                          <tech.icon className="w-5 h-5 sm:w-7 sm:h-7" />{" "}
+                          {/* FIXED: Responsive icon */}
+                        </div>
+                        <span className="text-[10px] sm:text-xs text-gray-400 font-medium opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300">
+                          {" "}
+                          {/* FIXED: Responsive text */}
+                          {tech.name}
+                        </span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+                {/* Enhanced CTA Button */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="pt-4"
+                >
+                  <Link
+                    href="#contact"
+                    className="group relative inline-flex items-center space-x-3 sm:space-x-4 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 rounded-2xl font-bold text-white shadow-2xl hover:shadow-purple-500/30 transition-all duration-500 overflow-hidden text-base sm:text-lg" // FIXED: Responsive sizing
+                  >
+                    {/* Shine Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                    <span className={`relative z-10 ${poppins.className}`}>
+                      Let&apos;s Build Something Amazing
+                    </span>
+                    <FiArrowRight className="w-4 h-4 sm:w-5 sm:h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />{" "}
+                    {/* FIXED: Responsive icon */}
+                  </Link>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
