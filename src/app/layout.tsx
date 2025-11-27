@@ -1,7 +1,6 @@
 "use client"
 
 import type { Metadata } from "next";
-import  GlobalErrorTracker from '@/components/GlobalErrorTracker'
 import { Inter, Poppins } from "next/font/google";
 import "@/app/globals.css";
 
@@ -36,7 +35,6 @@ export default function RootLayout({
       className={`${poppins.variable} ${inter.variable}`}
     >
       <body className="font-inter" suppressHydrationWarning>
-         <GlobalErrorTracker/>
         {children}
       </body>
     </html>
