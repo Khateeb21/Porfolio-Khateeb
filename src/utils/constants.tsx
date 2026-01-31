@@ -228,13 +228,6 @@ export const SKILLS: Skill[] = [
     category: "Frontend",
     proficiency: 74,
   },
-  {
-    icon: SiFigma,
-    name: "Figma",
-    color: "from-cyan-400 to-teal-500",
-    category: "Frontend",
-    proficiency: 75,
-  },
     {
     icon: SiPrisma,
     name: "Prisma",
