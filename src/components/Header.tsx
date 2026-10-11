@@ -96,7 +96,7 @@ const Header = () => {
               <div className="relative">
                 <Image
                   src="/images/logo/logo.png"
-                  alt="Khateeb Fayaz"
+                  alt="Mohammad Khateeb"
                   width={48}
                   height={48}
                   className="object-cover rounded-full ring-2 ring-zinc-700/50 group-hover:ring-purple-500/50 transition-all duration-300"
@@ -107,7 +107,7 @@ const Header = () => {
                 <span
                   className={`text-lg md:text-xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent tracking-tight ${poppins.className}`}
                 >
-                  Khateeb Fayaz
+                  Mohammad Khateeb
                 </span>
                 <span className="text-xs text-zinc-400 font-medium tracking-wide">
                   Full Stack Developer
@@ -195,7 +195,7 @@ const Header = () => {
             >
               <Image
                 src="/images/logo/logo.png"
-                alt="Khateeb Fayaz"
+                alt="Mohammad Khateeb"
                 width={36}
                 height={36}
                 className="object-cover rounded-full ring-1 ring-zinc-700/50"
@@ -203,7 +203,7 @@ const Header = () => {
               <span
                 className={`text-base font-bold text-white ${poppins.className}`}
               >
-                Khateeb Fayaz
+                Mohammad Khateeb
               </span>
             </motion.div>
 
