@@ -157,7 +157,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="flex items-center space-x-2 text-zinc-400 text-sm">
-              <span>&copy; {currentYear} Khateeb Fayaz. All rights reserved.</span>
+              <span>&copy; {currentYear} Mohammad Khateeb. All rights reserved.</span>
               <span className="hidden sm:inline">•</span>
               <div className="flex items-center space-x-1">
                 <span>Made with</span>
