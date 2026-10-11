@@ -174,10 +174,10 @@ const HeroSection = () => {
                 className={`font-bold leading-[1.1] tracking-tighter text-4xl sm:text-5xl lg:text-7xl xl:text-8xl ${poppins.className}`}
               >
                 <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  Khateeb
+                  Mohammad
                 </span>{" "}
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
-                  Fayaz
+                  Khateeb
                 </span>
               </h1>
             </motion.div>
@@ -210,7 +210,7 @@ const HeroSection = () => {
             <p
               className={`text-gray-400 text-lg leading-relaxed ${inter.className}`}
             >
-              With <span className="text-purple-400 font-semibold">1 year</span>{" "}
+              With <span className="text-purple-400 font-semibold">2+ year</span>{" "}
               of experience, I have been coding since 11th grade, and I love
               coding, designing, and solving complex problems. My curiosity and
               passion for understanding how games and computers work led me to
